@@ -5,6 +5,10 @@ import wordList from "./words_5";
 export const ROWS = 6;
 export const COLS = 5;
 
+export function changeRows(x) {
+	ROWS = x
+}
+
 export const words = {
 	...wordList,
 	contains: (word: string) => {
