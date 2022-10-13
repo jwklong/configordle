@@ -22,6 +22,7 @@
 
 	let stats: Stats;
 	let word: string;
+	let guesses: number;
 	let state: GameState;
 
 	settings.set(
@@ -45,6 +46,7 @@
 		window.location.hash = GameMode[m];
 		stats = (JSON.parse(localStorage.getItem(`stats-${m}`)) as Stats) || createDefaultStats(m);
 		word = words.words[seededRandomInt(0, words.words.length, modeData.modes[m].seed)];
+		guesses = seededRandomInt(5, 7, modeData.modes[m].seed);
 		let temp: GameState;
 		if (modeData.modes[m].historical === true) {
 			temp = JSON.parse(localStorage.getItem(`state-${m}-h`));
