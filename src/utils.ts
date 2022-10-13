@@ -2,8 +2,8 @@ import seedrandom from "seedrandom";
 import { GameMode, ms } from "./enums";
 import wordList from "./words_5";
 
-export const ROWS = 6;
-export const COLS = 5;
+export var ROWS = 6;
+export var COLS = 5;
 
 export function changeRows(x) {
 	ROWS = x
